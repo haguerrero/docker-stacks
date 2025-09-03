@@ -25,8 +25,8 @@ services:
       PMA_ARBITRARY: 1
     ports:
       - "8080:80"
-    # volumes:
-    #   - ./pma-config/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+    volumes:
+    - ./pma-config/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
     depends_on:
       - mysql
     networks:
